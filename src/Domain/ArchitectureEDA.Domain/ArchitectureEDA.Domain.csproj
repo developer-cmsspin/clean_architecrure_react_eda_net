@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Spin" />
+    <None Remove="Dto\Availability\" />
+    <None Remove="MediatR" />
+    <None Remove="Model\Availability\" />
+    <None Remove="Common\Kafka\" />
+    <None Remove="Confluent.Kafka" />
+    <None Remove="Model\AvaialbilityTwo\" />
+    <None Remove="Model\AvailabilityOne\" />
+    <None Remove="Model\State\" />
+    <None Remove="Model\State\Avaialbility\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Interfaces\Infrastructure\" />
+    <None Remove="Interfaces\Infrastructure\Availability\" />
+    <None Remove="Interfaces\Persistence\" />
+    <None Remove="Interfaces\Persistence\Repository\" />
+    <None Remove="Entities\" />
+    <None Remove="Entities\State\" />
+    <None Remove="MongoDB.Driver" />
+    <None Remove="Interfaces\Application\" />
+    <None Remove="Entities\Error\" />
+    <None Remove="Models\Error\" />
+    <None Remove="Entities\Session\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Spin" Version="0.2.0.16" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Confluent.Kafka" Version="1.9.3" />
+    <PackageReference Include="MongoDB.Driver" Version="2.17.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\Availability\" />
+    <Folder Include="Models\Availability\" />
+    <Folder Include="Commons\Kafka\" />
+    <Folder Include="Models\AvaialbilityTwo\" />
+    <Folder Include="Models\AvailabilityOne\" />
+    <Folder Include="Models\State\" />
+    <Folder Include="Models\State\Avaialbility\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Interfaces\Infrastructure\" />
+    <Folder Include="Interfaces\Infrastructure\Availability\" />
+    <Folder Include="Interfaces\Persistence\" />
+    <Folder Include="Interfaces\Persistence\Repository\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Entities\State\" />
+    <Folder Include="Interfaces\Application\" />
+    <Folder Include="Entities\Error\" />
+    <Folder Include="Models\Error\" />
+    <Folder Include="Entities\Session\" />
+  </ItemGroup>
+</Project>

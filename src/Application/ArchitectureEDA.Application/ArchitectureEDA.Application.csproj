@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>ArchitectureEDA.Application</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Commons\" />
+    <Folder Include="Services\Session\" />
+    <Folder Include="Services\Availability\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Commons\Kafka\" />
+    <Folder Include="Commons\Kafka\Configuration\" />
+    <Folder Include="Commons\Kafka\Extensions\" />
+    <Folder Include="Commons\Kafka\Internal\" />
+    <Folder Include="Configurations\Mappers\" />
+    <Folder Include="Commons\Kafka\Commons\" />
+    <Folder Include="Services\State\" />
+    <Folder Include="Commons\Merge\" />
+    <Folder Include="Services\Error\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Spin" Version="0.2.0.16" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.2.2" />
+    <PackageReference Include="Confluent.Kafka" Version="1.9.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\Session\" />
+    <None Remove="Services\Availability\" />
+    <None Remove="AutoMapper" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="MediatR" />
+    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="FluentValidation" />
+    <None Remove="Configurations\" />
+    <None Remove="Commons\Kafka\" />
+    <None Remove="Commons\Kafka\Configuration\" />
+    <None Remove="Confluent.Kafka" />
+    <None Remove="Commons\Kafka\Extensions\" />
+    <None Remove="Commons\Kafka\Internal\" />
+    <None Remove="Configurations\Mappers\" />
+    <None Remove="Commons\Kafka\Commons\" />
+    <None Remove="Services\State\" />
+    <None Remove="Commons\Merge\" />
+    <None Remove="Services\Error\" />
+    <None Remove="Miles.Architecture.Kafka" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\ArchitectureEDA.Domain\ArchitectureEDA.Domain.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\ArchitectureEDA.Application\ArchitectureEDA.Application.csproj" />
+    <ProjectReference Include="..\..\Domain\ArchitectureEDA.Domain\ArchitectureEDA.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ArchitectureEDA.Infrastructure.Persistence\ArchitectureEDA.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ArchitectureEDA.Infrastructure\ArchitectureEDA.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\ArchitectureEDA.Infrastructure.External\ArchitectureEDA.Infrastructure.External.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\Availability\" />
+    <None Remove="Services\Error\" />
+    <None Remove="Services\Session\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Program.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\Availability\" />
+    <Folder Include="Services\Error\" />
+    <Folder Include="Services\Session\" />
+  </ItemGroup>
+</Project>

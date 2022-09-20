@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.1" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
+    <PackageReference Include="coverlet.collector" Version="3.1.2" />
+    <PackageReference Include="Spin" Version="0.2.0.16" />
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Application\" />
+    <None Remove="Application\Services\" />
+    <None Remove="Spin" />
+    <None Remove="Infrasrtucture\" />
+    <None Remove="Presentation\" />
+    <None Remove="Infrasrtucture\Services\" />
+    <None Remove="Infrasrtucture\Persistence\" />
+    <None Remove="Presentation\EventService\" />
+    <None Remove="Bogus" />
+    <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
+    <None Remove="Extends\" />
+    <None Remove="Extends\Application\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\" />
+    <Folder Include="Application\Services\" />
+    <Folder Include="Infrasrtucture\" />
+    <Folder Include="Presentation\" />
+    <Folder Include="Infrasrtucture\Services\" />
+    <Folder Include="Infrasrtucture\Persistence\" />
+    <Folder Include="Presentation\EventService\" />
+    <Folder Include="Extends\" />
+    <Folder Include="Extends\Application\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Application\ArchitectureEDA.Application\ArchitectureEDA.Application.csproj" />
+    <ProjectReference Include="..\..\src\Domain\ArchitectureEDA.Domain\ArchitectureEDA.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\ArchitectureEDA.Infrastructure.Persistence\ArchitectureEDA.Infrastructure.Persistence.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\ArchitectureEDA.Infrastructure\ArchitectureEDA.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Presentation\ArchitectureEDA.EventService\ArchitectureEDA.EventService.csproj" />
+  </ItemGroup>
+</Project>
